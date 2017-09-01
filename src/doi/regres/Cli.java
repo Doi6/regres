@@ -209,7 +209,9 @@ public class Cli {
          error = func.error( pars, input, output );
       }
       /// string form of results
-      String dump() { return func.name()+" E:"+error+" ["+pars.dump()+"]"; }
+      String dump() { 
+         return func.name()+" E:"+error+": "+func.equation(pars); 
+       }
    }
    
 }

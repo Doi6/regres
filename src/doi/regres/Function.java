@@ -15,4 +15,7 @@ public interface Function {
    /// calculate function value with params at a coordinate
    Num value( Params params, Num x );
    
+   /// equation of function
+   String equation(Params params);
+   
 }

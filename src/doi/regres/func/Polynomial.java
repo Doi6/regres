@@ -38,6 +38,21 @@ public class Polynomial
       return ret;
    }
    
+   public String equation(Params pars) {
+      StringBuilder ret = new StringBuilder();
+      for (int i=degree; 0 <= i; --i) {
+         if (0 < ret.length())
+            ret.append(" + ");
+         String tmp = "";
+         if ( 2 <= i )
+            tmp = " * x^"+i;
+         else if (1 == i)
+            tmp = " * x";
+         ret.append( ""+pars.get(i)+tmp );
+      }
+      return ret.toString();
+   }
+   
    /// build row vector of sum(xi^k)
    protected Matrix powers( Datas din ) {
       int n = 2*degree+1;

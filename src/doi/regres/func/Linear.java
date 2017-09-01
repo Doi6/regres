@@ -39,4 +39,8 @@ public class Linear
       return params.get(1).mul( x ).plus( params.get(0) ); 
    }
    
+   public String equation( Params params ) {
+      return ""+params.get(1)+" * x + "+params.get(0);
+   }
+   
 }
